@@ -1,13 +1,23 @@
 require 'test_helper'
 
 class ArticlesControllerTest < ActionDispatch::IntegrationTest
-  test "should get title" do
-    get articles_title_url
+  test "should get index" do
+    get articles_index_url
     assert_response :success
   end
 
-  test "should get content:text" do
-    get articles_content:text_url
+  test "should get show" do
+    get articles_show_url
+    assert_response :success
+  end
+
+  test "should get new" do
+    get articles_new_url
+    assert_response :success
+  end
+
+  test "should get edit" do
+    get articles_edit_url
     assert_response :success
   end
 
